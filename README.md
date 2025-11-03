@@ -72,13 +72,12 @@ markdown
 Copy code
 ![Resume Analyzer Demo](demo.png)
 📂 Project Structure
-csharp
-Copy code
 resume-analyzer/
 │
 ├── app.py                # Main Flask app
 ├── templates/            # HTML templates
-│   └── index.html
+│   ├── index.html        # Upload page
+│   └── result.html       # Output display page
 ├── static/               # CSS, JS, and images
 ├── uploads/              # Uploaded resumes
 ├── requirements.txt      # Dependencies
