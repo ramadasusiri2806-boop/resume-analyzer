@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 700px;
+  padding: 30px;
+  text-align: center;
+  color: #333;
+}
+
+h1 {
+  font-size: 28px;
+  color: #6a1b9a;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 600;
+  text-align: left;
+  color: #4a148c;
+}
+
+select, input[type="file"] {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #ce93d8;
+  font-size: 15px;
+}
+
+button {
+  background: linear-gradient(90deg, #8e24aa, #7b1fa2);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #6a1b9a, #4a148c);
+}
+
+footer {
+  margin-top: 25px;
+  color: #6a1b9a;
+  font-size: 14px;
+}
+
+/* Result Page */
+.result-container {
+  padding-bottom: 50px;
+}
+
+.role-line {
+  margin-bottom: 15px;
+  color: #4a148c;
+  font-weight: 600;
+}
+
+.score-circle {
+  margin: 20px auto;
+}
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 150px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  stroke: #8e24aa;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  from { stroke-dasharray: 0 100; }
+}
+
+.percentage {
+  fill: #6a1b9a;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
+
+.card {
+  background: white;
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.card h2 {
+  color: #7b1fa2;
+  margin-bottom: 10px;
+}
+
+.details li {
+  margin: 5px 0;
+  list-style: none;
+  font-size: 15px;
+}
+
+.badge {
+  display: inline-block;
+  margin: 3px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.found {
+  background: #c8e6c9;
+  color: #256029;
+}
+
+.missing {
+  background: #ffcdd2;
+  color: #b71c1c;
+}
+
+.suggestion-card {
+  background: #f3e5f5;
+}
+
+.suggestions li {
+  list-style: none;
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+.back-btn {
+  display: inline-block;
+  background: #6a1b9a;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #4a148c;
+}

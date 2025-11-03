@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Strength Analyzer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>💼 Resume Strength Analyzer</h1>
+    <p class="tagline">Upload your resume and see how job-ready it is!</p>
+
+    <form action="/upload" method="POST" enctype="multipart/form-data" class="upload-form">
+      <label for="role">Select your target role:</label>
+      <select name="role" id="role" required>
+        <option value="data_analyst">Data Analyst</option>
+        <option value="data_scientist">Data Scientist</option>
+        <option value="web_developer">Web Developer</option>
+        <option value="uiux_designer">UI/UX Designer</option>
+        <option value="cloud_engineer">Cloud Engineer</option>
+        <option value="cyber_security">Cyber Security</option>
+      </select>
+
+      <label for="resume">Upload your Resume (PDF only):</label>
+      <input type="file" name="resume" id="resume" accept=".pdf" required>
+
+      <button type="submit">Analyze Resume 🚀</button>
+    </form>
+
+    <footer>
+      <p>✨ Built with Flask ✨</p>
+    </footer>
+  </div>
+</body>
+</html>

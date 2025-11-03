@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Analysis Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container result-container">
+    <h1>📊 Resume Strength Analysis</h1>
+    <p class="role-line">Target Role: <b>{{ role.replace('_', ' ').title() }}</b></p>
+
+    <div class="score-circle">
+      <svg viewBox="0 0 36 36" class="circular-chart">
+        <path class="circle-bg" d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.831a15.9155 15.9155 0 0 1 0 -31.831" />
+        <path class="circle" stroke-dasharray="{{ result.score }}, 100"
+              d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.831a15.9155 15.9155 0 0 1 0 -31.831" />
+        <text x="18" y="20.35" class="percentage">{{ result.score }}%</text>
+      </svg>
+    </div>
+
+    <div class="card">
+      <h2>🧩 Detailed Breakdown</h2>
+      <ul class="details">
+        <li><b>Experience:</b> {{ result.experience }}</li>
+        <li><b>Education:</b> {{ result.education }}</li>
+        <li><b>Projects:</b> {{ result.projects }}</li>
+        <li><b>Certifications:</b> {{ result.certifications }}</li>
+        <li><b>Contact Info:</b> {{ result.contact }}</li>
+        <li><b>CGPA Mentioned:</b> {{ result.cgpa }}</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🎯 Skill Match</h2>
+      <p><b>Found:</b> 
+        {% for skill in result.found_skills.split(', ') %}
+          <span class="badge found">{{ skill }}</span>
+        {% endfor %}
+      </p>
+      <p><b>Missing:</b> 
+        {% for skill in result.missing_skills.split(', ') %}
+          <span class="badge missing">{{ skill }}</span>
+        {% endfor %}
+      </p>
+    </div>
+
+    <div class="card suggestion-card">
+      <h2>💡 Suggestions</h2>
+      <ul class="suggestions">
+        {% for s in result.suggestions %}
+          <li>✨ {{ s }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <a href="/" class="back-btn">← Analyze Another Resume</a>
+  </div>
+</body>
+</html>
