@@ -74,10 +74,11 @@ Copy code
 📂 Project Structure
 resume-analyzer/
 │
-├── app.py                # Main Flask app
+├── app.py                # Main Flask app (handles routes and file uploads)
+├── analyzer.py           # Resume analysis logic (text extraction & NLP)
 ├── templates/            # HTML templates
 │   ├── index.html        # Upload page
-│   └── result.html       # Output display page
+│   └── result.html       # Display extracted results
 ├── static/               # CSS, JS, and images
 ├── uploads/              # Uploaded resumes
 ├── requirements.txt      # Dependencies
